@@ -8,6 +8,10 @@
     color: white;
     transition: 0.3s linear;
 }
+/* input  */
+.dark-input-bg{
+    background-color: #01394C;
+}
 
 .light {
     background-image: linear-gradient(100deg, #d4f1ff, #ffffff);
@@ -17,7 +21,7 @@
 
 .standard {
     background-image: linear-gradient(100deg, #575656, #062e3f);
-    color: #ffdfdb;
+    color: white;
     transition: 0.3s linear;
     overflow: hidden;
 }
@@ -88,39 +92,38 @@
 }
 
 /* input  */
-.no-border {
+.no-border{
+    border: solid transparent 2px;
+    outline: none;
+    border-radius: 20px 0px 0px 20px !important;
+}
+.standard-input {
     background-color: #00000087;
-    border: solid transparent 2px;
-    outline: none;
-    border-radius: 20px 0px 0px 20px !important;
+    
 
 }
 
-.no-border:hover {
+.standard-input:hover {
     background-color: #000000;
-    border: solid transparent 2px;
-    outline: none;
-    border-radius: 20px 0px 0px 20px !important;
+    color: white;
 }
+
 
 /* add button  */
 .radius-right {
-    background-color: #ffdfdb;
     border: solid transparent 2px !important;
     border-radius: 0px 20px 20px 0px !important;
 }
 
 .radius-right:hover {
-    background-color: white;
-    border: solid transparent 2px !important;
-    border-radius: 0px 20px 20px 0px !important;
+    background-color: rgba(255, 255, 255, 0.779);
     box-shadow: 0 0 10px #ffffff;
     transition: 0.3s;
 }
 
 /* button of task  */
 .task-button {
-    background-color: #ffdfdb;
+    background-color: rgba(255, 255, 255, 0.842);
     border: solid transparent 2px !important;
     /* border-radius: 60px !important; */
 }

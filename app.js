@@ -6,7 +6,7 @@ var containerValue = document.getElementById('containerOfTask')
 function addTask(){
   var createRow = document.createElement('div');
   createRow.className = 'row'; //row created
-  createRow.classList.add('row', 'd-inline-flex', 'align-items-center', 'border', 'border-0', 'rounded-pill', 'bg-lightdark', 'p-1', 'mb-2');
+  createRow.classList.add('row', 'd-inline-flex', 'align-items-center', 'border', 'border-0', 'rounded-pill', 'standard-input', 'p-1', 'mb-2');
 var containerValue = document.getElementById('containerOfTask')
 containerValue.appendChild(createRow)
 createRow.innerHTML = `<div class="col-auto d-flex align-items-center fs-4">`+inputValue.value+`</div>
@@ -79,3 +79,20 @@ function saveData(){
 }
 //show stored data when reload
 
+function standardTheme() {
+  var bodyGet = document.getElementsByTagName('body')[0];
+  // Set the class name
+  bodyGet.className = 'standard';
+}
+function lightTheme() {
+  var bodyGet = document.getElementsByTagName('body')[0];
+  
+  // Set the class name
+  bodyGet.className = 'light';
+}
+function darkTheme() {
+  var bodyGet = document.getElementsByTagName('body')[0];
+  
+  // Set the class name
+  bodyGet.className = 'darker';
+}

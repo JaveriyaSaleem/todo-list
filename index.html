@@ -13,13 +13,13 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
-<body class="standard">
+<body class="darker">
     <!-- theme circles  -->
      
     <div class="container w-100  d-flex justify-content-center d-md-flex justify-content-md-end  gap-4 mt-4">
-        <button class="btn bg-standard rounded-css p-3 border border-1"></button>
-        <button class="btn bg-light rounded-css p-3 border border-1"></button>
-        <button class="btn bg-dark rounded-css p-3 border border-1"></button>
+        <button class="btn bg-standard rounded-css p-3 border border-1" onclick="standardTheme()"></button>
+        <button class="btn bg-light rounded-css p-3 border border-1" onclick="lightTheme()"></button>
+        <button class="btn bg-dark rounded-css p-3 border border-1" onclick="darkTheme()"></button>
     </div>
     <!-- Main text  -->
     <div class="pt-4">
@@ -28,7 +28,9 @@
     <!-- input  -->
      <div class="container  w-100" id="inputDiv">
         <div class="row w-100 d-flex justify-content-center mt-5">
-        <input type="text" id="input" class="col-8 col-md-6 no-border text-center p-2   text-light " placeholder="Add a Task.">
+
+        <input type="text" id="input" class="col-8 col-md-6 standard-input no-border text-center p-2   text-light " placeholder="Add a Task.">
+
         <button class="col-3 col-md-2 col-lg-1 radius-right " onclick="addTask()">Add!!</button>      
         
     </div>
@@ -37,7 +39,7 @@
      <!-- list of task -->
      <div class="container d-flex flex-column align-items-center mt-1" id="containerOfTask">
 <!-- child of container row>>  -->
-        <!-- <div class="row d-inline-flex align-items-center border border-0 rounded-pill bg-lightdark p-1 mb-2">
+        <!-- <div class="row d-inline-flex align-items-center border border-0 rounded-pill dark-input-bg p-1 mb-2">
             <div class="col-auto d-flex align-items-center fs-4">task</div>
             <div class="col-auto d-flex align-items-center justify-content-center gap-2">
 
