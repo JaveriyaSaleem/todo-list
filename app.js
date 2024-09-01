@@ -1,5 +1,6 @@
 
 var inputValue = document.getElementById('input')
+var containerValue = document.getElementById('containerOfTask')
 
 
 function addTask(){
@@ -18,19 +19,22 @@ createRow.innerHTML = `<div class="col-auto d-flex align-items-center fs-4">`+in
 
   // emptying the input field 
 inputValue.value = "";
+saveData();
 }
 // deleteAll 
 function deleteAll(){
     lists.innerHTML = ""
+    saveData();
+
   }
 // edit icon -->
 function editText(element) {
   Swal.fire({
     input: 'textarea',
-    inputLabel: 'Message',
-    inputPlaceholder: 'Type your message here...',
+    inputLabel: 'Update Task',
+    inputPlaceholder: 'Update Here...',
     inputAttributes: {
-      'aria-label': 'Type your message here'
+      'aria-label': 'Update'
     },
     showCancelButton: true,
     inputValidator: (value) => {
@@ -47,15 +51,16 @@ function editText(element) {
       console.log(text); // Outputs the input value to the console
       var getTaskValue = element.parentNode.previousElementSibling;
       getTaskValue.innerHTML = text
-      window.storedText = text; // Global variable
-      localStorage.setItem('storedText', text); // Local storage example
+      saveData();
     }
   });
+  
 }
 // completed icon
 function completed(element){
   var fromIconToTask = element.parentNode.previousElementSibling;
   fromIconToTask.classList.add('text-decoration-line-through')
+  saveData();
 
   
 }
@@ -64,7 +69,13 @@ function dltIcon(element){
   var taskElement = element.parentNode.parentNode
   taskElement.classList.add('animate__animated','animate__backOutDown')
   setTimeout( function() {
-    taskElement.remove
+    taskElement.remove();
+    saveData();
   }, 2000);    
  }
+// local storage 
+function saveData(){
+  localStorage.setItem("task",containerValue.innerHTML)
+}
+//show stored data when reload
 

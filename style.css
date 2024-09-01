@@ -1,98 +1,132 @@
-:root{
-    -color-black : #000000
+:root {
+    -color-black: #000000
 }
+
 /* theme colors  */
-.darker{
+.darker {
     background-image: linear-gradient(100deg, #001214, #001f29);
     color: white;
     transition: 0.3s linear;
 }
+
 .light {
     background-image: linear-gradient(100deg, #d4f1ff, #ffffff);
     color: #1a150e;
     transition: 0.3s linear;
 }
+
 .standard {
     background-image: linear-gradient(100deg, #575656, #062e3f);
     color: #ffdfdb;
     transition: 0.3s linear;
     overflow: hidden;
 }
+
 /* background color  */
-.bg-dark{
+.bg-dark {
     background-image: linear-gradient(100deg, #001214, #001f29);
 }
-.bg-light{
+
+.bg-light {
     background-image: linear-gradient(100deg, #d4f1ff, #ffffff);
-    
+
 }
-.bg-standard{
+
+.bg-standard {
     background-image: linear-gradient(100deg, #575656, #062e3f);
 
 }
-.bg-lightdark{
+
+.bg-lightdark {
     background-color: #00000087;
 }
+
 /* theme buttons  */
-.rounded-css{
-    border-style: solid !important;
-    border: white !important;  
-    border-radius: 100% !important;
-}
-.rounded-css:hover{
+.rounded-css {
     border-style: solid !important;
     border: white !important;
-     box-shadow: 0 0 10px #ffffff;
     border-radius: 100% !important;
-    
 }
+
+.rounded-css:hover {
+    border-style: solid !important;
+    border: white !important;
+    box-shadow: 0 0 10px #ffffff;
+    border-radius: 100% !important;
+
+}
+
 /* font  */
 @font-face {
     font-family: Worksans;
     src: url(font/WorkSans-VariableFont_wght.ttf);
 }
 
-.font-94{
-    font-size: 96px;
+
+/* Default font size */
+.font-94 {
     font-family: Worksans;
+    font-size: 96px; /* Default size for large screens */
+}
+
+@media screen and (max-width: 420px) and (min-width: 280px) {
+    .font-94 {
+        font-size: 48px !important;
+    }
+}
+
+@media screen and (max-width: 690px) and (min-width: 421px)  {
+    .font-94 {
+        font-size: 64px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 691px)  {
+    .font-94 {
+        font-size: 96px !important;
+    }
 }
 
 /* input  */
-.no-border{
+.no-border {
     background-color: #00000087;
     border: solid transparent 2px;
     outline: none;
     border-radius: 20px 0px 0px 20px !important;
-   
+
 }
-.no-border:hover{
+
+.no-border:hover {
     background-color: #000000;
     border: solid transparent 2px;
     outline: none;
     border-radius: 20px 0px 0px 20px !important;
 }
+
 /* add button  */
-.radius-right{
+.radius-right {
     background-color: #ffdfdb;
     border: solid transparent 2px !important;
     border-radius: 0px 20px 20px 0px !important;
 }
-.radius-right:hover{
+
+.radius-right:hover {
     background-color: white;
     border: solid transparent 2px !important;
     border-radius: 0px 20px 20px 0px !important;
     box-shadow: 0 0 10px #ffffff;
-    transition: 0.3s ;
+    transition: 0.3s;
 }
 
 /* button of task  */
-.task-button{
+.task-button {
     background-color: #ffdfdb;
     border: solid transparent 2px !important;
     /* border-radius: 60px !important; */
 }
-.task-button:hover{
+
+.task-button:hover {
     background-color: white;
     box-shadow: 0 0 10px #ffffff;
-    transition: 0.3s ;
+    transition: 0.3s;
 }
