@@ -133,3 +133,8 @@
     box-shadow: 0 0 10px #ffffff;
     transition: 0.3s;
 }
+/* animation  */
+#just{
+    white-space: pre; /* Keeps spaces */
+    overflow: hidden;
+}

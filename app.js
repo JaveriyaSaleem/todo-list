@@ -2,6 +2,24 @@
 var inputValue = document.getElementById('input')
 var containerValue = document.getElementById('containerOfTask')
 
+var text = "Just Do it!";
+var index = 0;
+var speed = 100;
+
+function type() {
+    if (index < text.length) {
+        document.getElementById("just").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, speed); // Call the function again after the specified time
+
+    }
+
+}
+type();
+
+
+
+
 
 function addTask(){
   var createRow = document.createElement('div');
