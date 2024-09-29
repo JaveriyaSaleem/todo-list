@@ -27,6 +27,17 @@ function deleteAll(){
     saveData();
 
   }
+
+// completed icon
+var fromIconToTask;
+function completed(element){
+  fromIconToTask = element.parentNode.previousElementSibling;
+
+  fromIconToTask.classList.add('text-decoration-line-through')
+  saveData();
+
+  
+}
 // edit icon -->
 function editText(element) {
   Swal.fire({
@@ -47,21 +58,16 @@ function editText(element) {
       // Store the input value
       const text = result.value;
 
+
  
       console.log(text); // Outputs the input value to the console
       var getTaskValue = element.parentNode.previousElementSibling;
+      fromIconToTask.classList.remove('text-decoration-line-through')
+      
       getTaskValue.innerHTML = text
       saveData();
     }
   });
-  
-}
-// completed icon
-function completed(element){
-  var fromIconToTask = element.parentNode.previousElementSibling;
-  fromIconToTask.classList.add('text-decoration-line-through')
-  saveData();
-
   
 }
 // delete icon
