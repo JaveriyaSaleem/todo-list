@@ -73,6 +73,7 @@ function editText(element) {
 // delete icon
 function dltIcon(element){
   var taskElement = element.parentNode.parentNode
+  
   taskElement.classList.add('animate__animated','animate__backOutDown')
   setTimeout( function() {
     taskElement.remove();
@@ -80,10 +81,20 @@ function dltIcon(element){
   }, 2000);    
  }
 // local storage 
-function saveData(){
-  localStorage.setItem("task",containerValue.innerHTML)
+function saveData() {
+  if (containerValue.innerHTML.trim() === "") {
+    localStorage.removeItem("task");  // Remove from localStorage if empty
+  } else {
+    localStorage.setItem("task", containerValue.innerHTML);  // Save current tasks
+  }
 }
 //show stored data when reload
+function showStoredData() {
+  var savedTasks = localStorage.getItem("task");  // Get the stored tasks
+  if (savedTasks) {
+      containerValue.innerHTML = savedTasks;  // If tasks exist, display them
+  }
+}
 
 function standardTheme() {
   var bodyGet = document.getElementsByTagName('body')[0];
@@ -102,3 +113,4 @@ function darkTheme() {
   // Set the class name
   bodyGet.className = 'darker';
 }
+window.onload = showStoredData;
