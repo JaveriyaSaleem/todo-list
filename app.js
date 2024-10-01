@@ -3,8 +3,8 @@ var inputValue = document.getElementById('input')
 var containerValue = document.getElementById('containerOfTask')
 
 var text = "Just Do it!";
-var index = 0;
-var speed = 100;
+var index = 1;
+var speed = 200;
 
 function type() {
     if (index < text.length) {
@@ -13,9 +13,18 @@ function type() {
         setTimeout(type, speed); // Call the function again after the specified time
 
     }
-
+   else{
+    setTimeout( function(){
+    index = 1;
+    document.getElementById("just").innerHTML = "J";
+    setTimeout(type, speed);
+    },2000)
+   }
 }
 type();
+// setInterval (){
+      
+// }
 
 
 
